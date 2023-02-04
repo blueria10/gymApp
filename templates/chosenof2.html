@@ -1,0 +1,27 @@
+{%  extends "layout.html" %}
+
+ {%  block title %}Home{%  endblock %}
+
+ {%  block content %}
+<p>CHOICE #3</p>
+
+<form class="nextline" method="POST" action="/chosenofresult">
+
+<div class="labeling">
+<label for="choices">Choose 3 workouts you want to do today:</label>
+</div>
+<br><br>
+<div class="design1">
+    {% for o in weightchoices %}
+
+    <input type="checkbox" id="Input2" name="chosen2" value="{{o.strength}}">
+
+    <label for="vehicle1">{{o.strength}}</label><br>
+    {% endfor %}
+<div class="choices">
+<input type="submit" value="Choose">
+    </div>
+</div>
+</form>
+
+{%  endblock %}

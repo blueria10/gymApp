@@ -1,12 +1,11 @@
 import os
 import random
 
-import flask
+
 from flask import Flask, redirect, session
 from flask import request
 from flask_session import Session
 from flask import render_template
-from waitress import serve
 
 app = Flask(__name__)
 app.secret_key = 'the awesome super secret key'
@@ -60,8 +59,8 @@ def chosenofresult():
 
 
 if __name__ == "__main__":
-    # app.run(host="127.0.0.1", port=8000))
-    serve(app, host='127.0.0.1', port=8000,url_prefix="/gymApp",url_scheme='https')
+    app.run(host="127.0.0.1", port=8050)
+
     with app.test_request_context("/"):
         session["key"] = "value"
 

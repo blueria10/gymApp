@@ -1,0 +1,17 @@
+
+<!--Actual conversion and display of it-->
+{%  extends "layout.html" %}
+
+{%  block title %}Your workout is{%  endblock %}
+
+{%  block content %}
+<div class="end">
+<h4>ENJOY TODAY'S WORKOUT:</h4>
+
+    <p>For cardio: <span class="emph">{{select1}}</span> for <span class ="emph">{{select3}} minutes</span>.</p>
+    <p>For strength training (3sets/10reps each): <span class="emph">{{select2}}</span>. </p>
+</div>
+
+    <button onclick="window.location.href='/';">Start Over</button>
+{%  endblock %}
+

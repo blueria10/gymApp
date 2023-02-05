@@ -7,7 +7,7 @@ from flask import request
 from flask_session import Session
 from flask import render_template
 from waitress import serve
-import gym
+from my_wsgi_project import gym
 
 app = Flask(__name__)
 app.secret_key = 'the awesome super secret key'

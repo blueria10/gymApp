@@ -62,7 +62,7 @@ def chosenofresult():
 
 if __name__ == "__main__":
     # app.run(host="127.0.0.1", port=8000))
-    serve(gym, host='127.0.0.1', port=8000,url_prefix="/gymApp",url_scheme='https')
+    serve(gym.app, host='127.0.0.1', port=8000,url_prefix="/gymApp",url_scheme='https')
     with app.test_request_context("/"):
         session["key"] = "value"
 
